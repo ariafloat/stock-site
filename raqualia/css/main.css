@@ -429,3 +429,7 @@ footer p {
     line-height: 14px;
     border: dashed 2px #504DCB;
 }
+
+.pipeline-option {
+    padding: 0px 10px;
+}
