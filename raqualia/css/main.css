@@ -281,6 +281,12 @@ body {
     font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     min-height: 75rem;
 }
+@media all and (-ms-high-contrast:none) {
+	body {
+        font-family: "メイリオ", Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        min-height: 75rem;
+	}
+}
 
 .maintext-color {
     color:#555555
