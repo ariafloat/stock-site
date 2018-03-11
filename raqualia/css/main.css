@@ -505,3 +505,7 @@ footer p {
 .pipeline-option {
     padding: 0px 10px;
 }
+
+.breadcrumb-option {
+    background: #fff !important;
+}
