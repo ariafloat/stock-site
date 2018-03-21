@@ -49,13 +49,14 @@ export function parserHtmlAratana(data) {
   return result;
 }
 
-export function parserHtmlSyros(dataNews, dataEvents) {
+// export function parserHtmlSyros(dataNews, dataEvents) {
+export function parserHtmlSyros(dataNews) {
   const resulNews = [];
-  const resulEvents = [];
+  // const resulEvents = [];
   const $cn = cheerio.load(dataNews);
-  const $ce = cheerio.load(dataEvents);
+  // const $ce = cheerio.load(dataEvents);
   const divNews = $cn("div[class='media-body']");
-  const divEvents = $ce("div[class='media-body']");
+  // const divEvents = $ce("div[class='media-body']");
 
   for (let i = 0; i < divNews.length; i += 1) {
     resulNews.push({
@@ -66,6 +67,7 @@ export function parserHtmlSyros(dataNews, dataEvents) {
     if (i >= 4) break;
   }
 
+  /*
   for (let i = 0; i < divEvents.length; i += 1) {
     resulEvents.push({
       date: divEvents[i].children[1].children[0].data,
@@ -74,6 +76,8 @@ export function parserHtmlSyros(dataNews, dataEvents) {
     });
     if (i >= 4) break;
   }
+  */
 
-  return { news: resulNews, events: resulEvents };
+  // return { news: resulNews, events: resulEvents };
+  return resulNews;
 }
