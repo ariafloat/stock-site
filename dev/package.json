@@ -15,7 +15,6 @@
   "license": "GPL-3.0",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "cheerio": "^1.0.0-rc.2",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {

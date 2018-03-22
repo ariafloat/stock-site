@@ -1,8 +1,8 @@
-import getData from './get-data';
-import { parserHtmlRaqualia, parserHtmlAskat, parserHtmlAratana, parserHtmlSyros } from './parser-html';
+import getDataGoGo from './get-data';
+// import { parserHtmlRaqualia, parserHtmlAskat, parserHtmlAratana, parserHtmlSyros } from './parser-html';
 
 // const urls = ['http://www.raqualia.co.jp/', 'http://askat-inc.com/japanese/news/', 'http://www.aratana.com/news/', 'https://ir.syros.com/press-releases', 'https://ir.syros.com/ir-calendar'];
-const urls = ['http://www.raqualia.co.jp/', 'http://askat-inc.com/japanese/news/', 'http://www.aratana.com/news/', 'https://ir.syros.com/press-releases'];
+// const urls = ['http://www.raqualia.co.jp/', 'http://askat-inc.com/japanese/news/', 'http://www.aratana.com/news/', 'https://ir.syros.com/press-releases'];
 
 function dispInfo(data, insertId, loadingId) {
   let insertText = '';
@@ -13,7 +13,7 @@ function dispInfo(data, insertId, loadingId) {
   deleteNode.parentNode.removeChild(deleteNode);
   document.getElementById(insertId).insertAdjacentHTML('afterend', insertText);
 }
-
+/*
 getData(urls)
   .then((data) => {
     const raqualia = parserHtmlRaqualia(data.url1);
@@ -27,4 +27,14 @@ getData(urls)
     dispInfo(aratana, 'aratana-top', 'aratana-loading');
     dispInfo(syros, 'syros-news-top', 'syros-news-loading');
     // dispInfo(syros.events, 'syros-events-top', 'syros-events-loading');
+  });
+*/
+
+getDataGoGo()
+  .then((data) => {
+    dispInfo(data.raqualia.press, 'raqualia-press-top', 'raqualia-press-loading');
+    dispInfo(data.raqualia.news, 'raqualia-news-top', 'raqualia-news-loading');
+    dispInfo(data.askat, 'askat-top', 'askat-loading');
+    dispInfo(data.aratana, 'aratana-top', 'aratana-loading');
+    dispInfo(data.syros, 'syros-news-top', 'syros-news-loading');
   });

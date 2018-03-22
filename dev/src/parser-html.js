@@ -1,3 +1,4 @@
+/*
 import cheerio from 'cheerio';
 
 export function parserHtmlRaqualia(data) {
@@ -63,19 +64,18 @@ export function parserHtmlSyros(dataNews) {
     });
     if (i >= 4) break;
   }
-  /*
-  const resulEvents = [];
-  const $ce = cheerio.load(dataEvents);
-  const divEvents = $ce("div[class='media-body']");
-  for (let i = 0; i < divEvents.length; i += 1) {
-    resulEvents.push({
-      date: divEvents[i].children[1].children[0].data,
-      title: divEvents[i].children[4].children[0].children[0].data,
-      url: divEvents[i].children[4].children[0].attribs.href,
-    });
-    if (i >= 4) break;
-  }
-  */
+  // const resulEvents = [];
+  // const $ce = cheerio.load(dataEvents);
+  // const divEvents = $ce("div[class='media-body']");
+  // for (let i = 0; i < divEvents.length; i += 1) {
+  //   resulEvents.push({
+  //     date: divEvents[i].children[1].children[0].data,
+  //     title: divEvents[i].children[4].children[0].children[0].data,
+  //     url: divEvents[i].children[4].children[0].attribs.href,
+  //   });
+  //   if (i >= 4) break;
+  // }
   // return { news: resulNews, events: resulEvents };
   return resulNews;
 }
+*/
