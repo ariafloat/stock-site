@@ -1,9 +1,7 @@
-// Avoid unnecessary caching in IE browser
-let headers = {};
-const userAgent = window.navigator.userAgent.toLowerCase();
-if (userAgent.indexOf('msie') !== -1 || userAgent.indexOf('trident') !== -1) {
-  headers = { pragma: 'no-cache' };
-}
+const headers = {
+  pragma: 'no-cache',
+  cache: 'no-store',
+};
 
 /*
 export async function getData(urls) {
