@@ -1,22 +1,23 @@
 import cheerio from 'cheerio';
 
 export function parserHtmlRaqualia(data) {
-  function twoParse($c, div, topUrl) {
-    const result = [];
-    const dt = $c(div).find('dt');
-    const dd = $c(div).find('dd');
-    for (let i = 0; i < 5; i += 1) {
-      result.push({
-        date: $c(dt[i]).text(),
-        title: $c(dd[i])[0].children[1].children[0].data,
-        url: `${topUrl}${$c(dd[i])[0].children[1].attribs.href}`,
-      });
-    }
+  function twoParse(dl, topUrl) {
+    const dt = dl.children.filter(v => v.name === 'dt');
+    const dd = dl.children.filter(v => v.name === 'dd');
+    if (dt.length > 5) dt.splice(5, (dt.length - 5));
+    const result = dt.map((element, index) => {
+      const res = {
+        date: element.children[0].data,
+        title: dd[index].children[1].children[0].data,
+        url: `${topUrl}${dd[index].children[1].attribs.href}`,
+      };
+      return res;
+    });
     return result;
   }
   const $c = cheerio.load(data);
-  const div = $c("div[class='box']");
-  return { press: twoParse($c, div[0], ''), news: twoParse($c, div[1], 'http://www.raqualia.co.jp/') };
+  const dl = $c("div[class='box'] dl");
+  return { press: twoParse(dl[0], ''), news: twoParse(dl[1], 'http://www.raqualia.co.jp/') };
 }
 
 export function parserHtmlAskat(data) {
@@ -52,12 +53,8 @@ export function parserHtmlAratana(data) {
 // export function parserHtmlSyros(dataNews, dataEvents) {
 export function parserHtmlSyros(dataNews) {
   const resulNews = [];
-  // const resulEvents = [];
   const $cn = cheerio.load(dataNews);
-  // const $ce = cheerio.load(dataEvents);
   const divNews = $cn("div[class='media-body']");
-  // const divEvents = $ce("div[class='media-body']");
-
   for (let i = 0; i < divNews.length; i += 1) {
     resulNews.push({
       date: divNews[i].children[1].children[0].children[0].data,
@@ -66,8 +63,10 @@ export function parserHtmlSyros(dataNews) {
     });
     if (i >= 4) break;
   }
-
   /*
+  const resulEvents = [];
+  const $ce = cheerio.load(dataEvents);
+  const divEvents = $ce("div[class='media-body']");
   for (let i = 0; i < divEvents.length; i += 1) {
     resulEvents.push({
       date: divEvents[i].children[1].children[0].data,
@@ -77,7 +76,6 @@ export function parserHtmlSyros(dataNews) {
     if (i >= 4) break;
   }
   */
-
   // return { news: resulNews, events: resulEvents };
   return resulNews;
 }
