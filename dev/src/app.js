@@ -37,4 +37,7 @@ getDataGoGo()
     dispInfo(data.askat, 'askat-top', 'askat-loading');
     dispInfo(data.aratana, 'aratana-top', 'aratana-loading');
     dispInfo(data.syros, 'syros-news-top', 'syros-news-loading');
+  }).catch((err) => {
+    document.getElementById('news').insertAdjacentHTML('afterbegin', '<p class="text-danger">Oh Yes! 表示できません Oh Yes!</p>');
+    console.error(err);
   });
