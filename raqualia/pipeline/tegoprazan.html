@@ -127,10 +127,10 @@
             var myChart = new Chart(ctx, {
               type: 'line',
               data: {
-                labels: ["15Q1", "15Q2", "15Q3", "15Q4", "16Q1", "16Q2", "16Q3", "16Q4", "17Q1", "17Q2", "17Q3"],
+                labels: ["15Q1", "15Q2", "15Q3", "15Q4", "16Q1", "16Q2", "16Q3", "16Q4", "17Q1", "17Q2", "17Q3", "17Q4"],
                 datasets: [{
                   label: '売上高（億円）',
-                  data: [5, 15, 22, 42, 64, 75, 108, 95, 125, 128, 167],
+                  data: [5, 15, 22, 42, 64, 75, 108, 95, 125, 128, 167, 131],
                   fill: true,
                   backgroundColor: 'rgba(255, 159, 64, 0.2)',
                   borderColor: 'rgba(255, 159, 64, 1)',
@@ -140,6 +140,24 @@
               options: {}
           });
           </script>
+          <br>
+          <table class="table table-bordered" style="font-size: 0.9em">
+            <caption>タケキャブ 年度売上高（億円）</caption>
+            <thead>
+              <tr>
+                <th scope="col">2015年度</th>
+                <th scope="col">2016年度</th>
+                <th scope="col">2017年度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>84</td>
+                <td>341</td>
+                <td>551</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
       <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
