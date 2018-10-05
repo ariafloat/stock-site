@@ -49,6 +49,16 @@
     line-height: 29px;
 }
 
+.pipeline-arrow-link {
+    color: #FFFF00;
+    text-decoration: underline;
+}
+
+.pipeline-arrow-link:hover {
+    color: #FADF00;
+    text-decoration: underline;
+}
+
 .pipeline-arrow-prepared {
     margin: 2px 0px;
     background: #698447;
@@ -71,6 +81,16 @@
     font-size: 13px;
     color: #fff;
     line-height: 29px;
+}
+
+.pipeline-arrow-prepared-link {
+    color: #FFEDE8;
+    text-decoration: underline;
+}
+
+.pipeline-arrow-prepared-link:hover {
+    color: #FFC2C1;
+    text-decoration: underline;
 }
 
 .pipeline-arrow-end {
