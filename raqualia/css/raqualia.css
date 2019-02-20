@@ -3,6 +3,15 @@
     max-width: 90%;
 }
 
+table.table-simple {
+    border: 1px solid #808080;
+}
+
+table.table-simple th,
+table.table-simple td {
+    border: 1px solid #808080;
+}
+
 .pipeline-arrow {
     margin: 2px 0px;
     background: #504DCB;
