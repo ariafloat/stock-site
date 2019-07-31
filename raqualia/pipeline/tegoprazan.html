@@ -149,17 +149,16 @@
       <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
         <div class="container" style="max-width: 700px;">
           <h2 style="font-size: 1.7em">タケキャブの売上高推移</h2>
-          <p>日本における売上高。</p>
           <canvas id="takecabChart" width="400" height="300"></canvas>
           <script>
             var ctx = document.getElementById("takecabChart").getContext('2d');
             var myChart = new Chart(ctx, {
               type: 'line',
               data: {
-                labels: ["15Q1", "15Q2", "15Q3", "15Q4", "16Q1", "16Q2", "16Q3", "16Q4", "17Q1", "17Q2", "17Q3", "17Q4", "18Q1", "18Q2", "18Q3", "18Q4"],
+                labels: ["15Q1", "15Q2", "15Q3", "15Q4", "16Q1", "16Q2", "16Q3", "16Q4", "17Q1", "17Q2", "17Q3", "17Q4", "18Q1", "18Q2", "18Q3", "18Q4", "19Q1"],
                 datasets: [{
                   label: '売上高（億円）',
-                  data: [5, 15, 22, 42, 64, 75, 108, 95, 113, 110, 151, 110, 142, 129, 171, 138],
+                  data: [5, 15, 22, 42, 64, 75, 108, 95, 113, 110, 151, 110, 143, 130, 171, 139, 183],
                   fill: true,
                   backgroundColor: 'rgba(255, 159, 64, 0.2)',
                   borderColor: 'rgba(255, 159, 64, 1)',
@@ -185,7 +184,7 @@
                 <td>84</td>
                 <td>341</td>
                 <td>485</td>
-                <td>580</td>
+                <td>582</td>
               </tr>
             </tbody>
           </table>
@@ -193,10 +192,6 @@
           ※ 各年度における売上高の計算について<br>
           2015, 2016年度：グロスベース（値引・割戻等の控除前）の売上高<br>
           2017年度以降：ネットベース（値引・割戻等の控除後）の売上高
-          </p>
-          <p class="text-left">
-          ※ 18Q4の売上高の算出方法<br>
-          2018年度年間売上高から18Q1, 18Q2, 18Q3の売上高を引いた値
           </p>
         </div>
       </section>
