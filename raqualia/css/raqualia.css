@@ -58,6 +58,19 @@ table.table-simple td {
     line-height: 29px;
 }
 
+.pipeline-arrow-legend-en {
+    width: 80px;
+    float: left;
+    margin: 0px 2px;
+    background: #504DCB;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 29px;
+}
+
 .pipeline-arrow-link {
     color: #FFFF00;
     text-decoration: underline;
@@ -81,6 +94,19 @@ table.table-simple td {
 
 .pipeline-arrow-prepared-legend {
     width: 75px;
+    float: left;
+    margin: 0px 2px;
+    background: #698447;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 29px;
+}
+
+.pipeline-arrow-prepared-legend-en {
+    width: 80px;
     float: left;
     margin: 0px 2px;
     background: #698447;
@@ -148,6 +174,19 @@ table.table-simple td {
     line-height: 29px;
 }
 
+.pipeline-arrow-end-legend-en {
+    width: 80px;
+    float: left;
+    margin: 0px 2px;
+    background: #978083;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 29px;
+}
+
 .pipeline-arrow-sale {
     margin: 2px 0px;
     background: #DD9F21;
@@ -161,6 +200,19 @@ table.table-simple td {
 
 .pipeline-arrow-sale-legend {
     width: 75px;
+    float: left;
+    margin: 0px 2px;
+    background: #DD9F21;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 29px;
+}
+
+.pipeline-arrow-sale-legend-en {
+    width: 80px;
     float: left;
     margin: 0px 2px;
     background: #DD9F21;
@@ -210,6 +262,20 @@ table.table-simple td {
     border: dashed 2px #504DCB;
 }
 
+.pipeline-arrow-plan-legend-en {
+    width: 80px;
+    float: left;
+    margin: 0px 2px;
+    background: #fff;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 13px;
+    color: #000000;
+    line-height: 29px;
+    border: dashed 2px #504DCB;
+}
+
 .pipeline-option {
     padding: 0px 10px;
 }
@@ -217,3 +283,151 @@ table.table-simple td {
 .breadcrumb-option {
     background: #fff !important;
 }
+
+.scrollbooster-viewport-pipeline {
+    width: 100%;
+    max-width: 1329px;
+    background: #e4e4e4;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: default;
+}
+
+.table-pipeline {
+    width: 1328px;
+    table-layout: fixed;
+    background: #fff;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.scrollbooster-viewport-pipeline-other {
+    width: 100%;
+    max-width: 511px;
+    background: #e4e4e4;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: default;
+}
+
+.table-pipeline-other {
+    width: 510px;
+    table-layout: fixed;
+    background: #fff;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.scrollbooster-viewport-pipeline-other-en {
+    width: 100%;
+    max-width: 541px;
+    background: #e4e4e4;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: default;
+}
+
+.table-pipeline-other-en {
+    width: 540px;
+    table-layout: fixed;
+    background: #fff;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.scrollbooster-viewport-contract-other {
+    width: 100%;
+    max-width: 731px;
+    background: #e4e4e4;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: default;
+}
+
+.table-contract-other {
+    width: 730px;
+    table-layout: fixed;
+    background: #fff;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.scrollbooster-viewport-university {
+    width: 100%;
+    max-width: 861px;
+    background: #e4e4e4;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: default;
+}
+
+.table-university {
+    width: 860px;
+    table-layout: fixed;
+    background: #fff;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.table-subsidiary {
+    table-layout: fixed;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.table-subsidiary td {
+    padding: 0 20px 0 20px;
+}
+
+.pipeline-arrow-example {
+    width: 395px;
+    background: #fff;
+    margin: 0 auto 8px auto; 
+}
+
+.pipeline-arrow-example-en {
+    width: 420px;
+    background: #fff;
+    margin: 0 auto 8px auto; 
+}
+
+@media (max-width: 1495px) {
+    .scrollbooster-viewport-pipeline {
+        cursor: move;
+    }
+ }
+@media (max-width: 585px) {
+    .scrollbooster-viewport-pipeline-other {
+        cursor: move;
+    }
+}
+@media (max-width: 615px) {
+    .scrollbooster-viewport-pipeline-other-en {
+        cursor: move;
+    }
+}
+@media (max-width: 832px) {
+    .scrollbooster-viewport-contract-other {
+        cursor: move;
+    }
+}
+@media (max-width: 975px) {
+    .scrollbooster-viewport-university {
+        cursor: move;
+    }
+}
+
+@media (max-width: 480px) {
+    .pipeline-arrow-example-clearboth {
+        clear: both;
+        margin-bottom: 5px;
+    }
+    .pipeline-arrow-example {
+        width: 240px;
+    }
+    .pipeline-arrow-example-en {
+        width: 255px;
+    }
+ }
