@@ -130,7 +130,7 @@
       <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
         <div class="container" style="max-width: 700px;">
           <h2 style="font-size: 1.7em">競合製品</h2>
-          <p>2019年5月16日更新</p>
+          <p>2019年12月9日更新</p>
           <p class="text-left">胃食道逆流症（GERD）の領域では、アストラゼネカのPPIである「ネキシウム」が2017年現在、世界で1番売れている。</p>
           <p class="text-left">
             2019年現在、販売されているP-CABは、韓国で販売されている「テゴプラザン（Tegoprazan）」、「レバプラザン（Revaprazan）」と日本で販売されている武田薬品工業の「ボノプラザン（Vonoprazan、日本販売名：タケキャブ、化合物コード：TAK-438）」である。<br>
@@ -143,11 +143,39 @@
           </p>
           <p class="text-left">2018年6月20日現在、P-CABを開発中のその他の企業の一部を以下に示す。</p>
             <ul class="text-left">
-              <li>大熊製薬（韓国）<br>化合物名：DWP14012<br>韓国で開発中。世界進出を計画している。</li>
-              <li>第一薬品（Jeil Pharmaceutical）（韓国）<br>化合物名：JP-1366<br>韓国で開発中。<a href="http://www.medipana.com/news/news_viewer.asp?NewsNum=221593&MainKind=A&NewsKind=5&vCount=12&vKind=1" target="_blank" rel="nofollow">2019年に欧州で治験のフェーズ1を開始予定</a>。</li>
+              <li>大熊製薬（韓国）<br>化合物名：DWP14012（Fexuprazan）</li>
+              <li>第一薬品（Jeil Pharmaceutical）（韓国）<br>化合物名：JP-1366</li>
               <li><a href="http://www.cincluspharma.com/" target="_blank" rel="nofollow">Cinclus Pharma AG</a>（スイス）<br>化合物名：X842<br><a href="https://news.cision.com/cinclus-pharma/r/cinclus-pharma-announces-news-on-the-further-development-of-x842-and-secures-financing-thru-a-direct,c2797255" target="_blank" rel="nofollow">欧州で治験のフェーズ1を成功済み、欧州と米国でフェーズ2を開始予定</a>。</li>
             </ul>
           <p class="text-left">ラクオリア創薬は、全てのP-CABを対象とする特定の関連特許を保有しているため、もし他のP-CAB製品がその特許の権利に関わった場合は、ラクオリア創薬は権利を主張することができる。</p>
+        </div>
+      </section>
+      <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container" style="max-width: 700px;">
+          <h2 style="font-size: 1.7em">Tegoprazanの韓国の院外処方実績推移</h2>
+          <canvas id="kcabChart" width="400" height="300"></canvas>
+          <script>
+            var ctx = document.getElementById("kcabChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ["19/03", "19/04", "19/05", "19/06", "19/07", "19/08", "19/09", "19/10"],
+                datasets: [{
+                  label: '院外処方実績（億ウォン）',
+                  data: [15, 22, 24, 19, 22, 24, 27, 34],
+                  fill: true,
+                  backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                  borderColor: 'rgba(255, 159, 64, 1)',
+                  borderWidth: 1,
+                }]
+              },
+              options: {}
+          });
+          </script>
+          <br>
+          <p class="text-left">
+            ※ 出典：UBIST
+          </p>
         </div>
       </section>
       <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
