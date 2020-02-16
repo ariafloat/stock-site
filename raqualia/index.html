@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="css/raqualia.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <!-- Google AdSense（ページ単位の広告） -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -917,84 +916,6 @@
         <div class="container" style="max-width: 700px;">
           <h2 style="font-size: 1.7em">ラクオリア創薬の業績推移</h2>
           <canvas id="raqualiaPerformanceChart" width="400px" height="300px"></canvas>
-          <script>
-            var chartColor = {
-              red: 'rgba(255, 99, 132, 1)',
-              redBg: 'rgba(255, 99, 132, 0.5)',
-              redForecast: 'rgba(255, 99, 132, 0.1)',
-              blue: 'rgba(54, 162, 235, 1)',
-              blueBg: 'rgba(54, 162, 235, 0.5)',
-              blueForecast: 'rgba(54, 162, 235, 0.1)',
-              orange: 'rgba(255, 159, 64, 1)',
-              orangeBg: 'rgba(255, 159, 64, 0.5)',
-              orangeForecast: 'rgba(255, 159, 64, 0.1)',
-              green: 'rgba(75, 192, 192, 1)',
-              greenBg: 'rgba(75, 192, 192, 0.5)',
-              greenForecast: 'rgba(75, 192, 192, 0.1)',
-            };
-            var chartDrawColor = {
-              netSales: {
-                background: []
-              },
-              operatingProfit: {
-                background: []
-              },
-              ordinaryProfit: {
-                background: []
-              },
-              netProfit: {
-                background: []
-              }
-            }
-            for (var i = 0; i < 9; i++) {
-              chartDrawColor.netSales.background.push(chartColor.redBg);
-              chartDrawColor.operatingProfit.background.push(chartColor.blueBg);
-              chartDrawColor.ordinaryProfit.background.push(chartColor.orangeBg);
-              chartDrawColor.netProfit.background.push(chartColor.greenBg);
-            }
-            chartDrawColor.netSales.background.push(chartColor.redForecast);
-            chartDrawColor.operatingProfit.background.push(chartColor.blueForecast);
-            chartDrawColor.ordinaryProfit.background.push(chartColor.orangeForecast);
-            chartDrawColor.netProfit.background.push(chartColor.greenForecast);
-            var ctx = document.getElementById("raqualiaPerformanceChart").getContext('2d');
-            var myChart = new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020 予想'],
-                datasets: [{
-                  label: '売上高',
-                  backgroundColor: chartDrawColor.netSales.background,
-                  borderColor: chartColor.red,
-                  borderWidth: 1,
-                  data: [684, 28, 228, 153, 145, 705, 1419, 744, 1702, 2129],
-                }, {
-                  label: '営業利益',
-                  backgroundColor: chartDrawColor.operatingProfit.background,
-                  borderColor: chartColor.blue,
-                  borderWidth: 1,
-                  data: [-1916, -2636, -2137, -2183, -1864, -759, -150, -1075, -15, 70],
-                }, {
-                  label: '経常利益',
-                  backgroundColor: chartDrawColor.ordinaryProfit.background,
-                  borderColor: chartColor.orange,
-                  borderWidth: 1,
-                  data: [-1906, -2891, -1819, -2116, -1795, -720, -80, -1064, 21, 85],
-                }, {
-                  label: '純利益',
-                  backgroundColor: chartDrawColor.netProfit.background,
-                  borderColor: chartColor.green,
-                  borderWidth: 1,
-                  data: [-1916, -2905, -1108, -638, -1854, -728, -58, -1104, 5, 13],
-                }]
-              },
-              options: {
-                responsive: true,
-                legend: {
-                  position: 'top'
-                }
-              }
-          });
-          </script>
           <p class="text-left" style="margin-top: 25px;">
             ※ 単位：百万円（百万円未満切捨て）<br>
             ※ 2011年、2012年、2015年、2016年は非連結。他の年は連結。
@@ -1042,5 +963,14 @@
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
     <script src="js/responsive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script>
+      window.onload = function() {
+        var ctx = document.getElementById("raqualiaPerformanceChart").getContext('2d');
+        var chartDataJa = new chartData('売上高', '営業利益', '経常利益', '純利益', '予想');
+        var chartObj = new Chart(ctx, chartDataJa.data);      
+      };
+    </script>
   </body>
 </html>
