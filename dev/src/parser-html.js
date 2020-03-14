@@ -36,21 +36,6 @@ export function parserHtmlAskat(data) {
   return result;
 }
 
-export function parserHtmlAratana(data) {
-  const result = [];
-  const $c = cheerio.load(data);
-  const header = $c("div[class='news-blocks'] header[class=entry-header]");
-  for (let i = 0; i < header.length; i += 1) {
-    result.push({
-      date: header[i].children[2].children[1].children[0].data,
-      title: header[i].children[1].children[0].children[0].data,
-      url: header[i].children[1].children[0].attribs.href,
-    });
-    if (i >= 4) break;
-  }
-  return result;
-}
-
 // export function parserHtmlSyros(dataNews, dataEvents) {
 export function parserHtmlSyros(dataNews) {
   const resulNews = [];
