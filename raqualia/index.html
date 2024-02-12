@@ -961,16 +961,6 @@
           </table>
         </div>
       </section>
-      <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
-        <div class="container" style="max-width: 700px;">
-          <h2 style="font-size: 1.7em">ラクオリア創薬の業績推移</h2>
-          <canvas id="raqualiaPerformanceChart" width="400px" height="300px"></canvas>
-          <p class="text-left" style="margin-top: 25px;">
-            ※ 単位：百万円（百万円未満切捨て）<br>
-            ※ 2011年、2012年、2015年、2016年は非連結。他の年は連結。
-          </p>
-        </div>
-      </section>
       <section class="text-center" style="background-color: #FFFFFF; padding-top: 1rem; padding-bottom: 1rem;">
         <div class="container">
           <p>個人調査に基づくため、事業内容変更や誤認等により、本サイトの情報は“事実と異なる場合”があります。<br>そのため、投資判断に利用しないでください。また、本サイトは投資勧誘を目的としたものではありません。</p>
@@ -1012,14 +1002,5 @@
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
     <script src="js/responsive.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-    <script src="js/chart.js"></script>
-    <script>
-      window.onload = function() {
-        var ctx = document.getElementById("raqualiaPerformanceChart").getContext('2d');
-        var chartDataJa = new chartData('売上高', '営業利益', '経常利益', '純利益', '予想');
-        var chartObj = new Chart(ctx, chartDataJa.data);
-      };
-    </script>
   </body>
 </html>

@@ -947,16 +947,6 @@
           </table>
         </div>
       </section>
-      <section class="text-center" style="background-color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
-        <div class="container" style="max-width: 700px;">
-          <h2 style="font-size: 1.7em">RaQualia Pharma Business Performance</h2>
-          <canvas id="raqualiaPerformanceChart" width="400px" height="300px"></canvas>
-          <p class="text-left" style="margin-top: 25px;">
-            ※ Unit: million yen (Amounts are rounded down to the nearest million yen)<br>
-            ※ Non-consolidated: 2011, 2012, 2015, 2016 year. Consolidated: Other years.
-          </p>
-        </div>
-      </section>
       <section class="text-center" style="background-color: #FFFFFF; padding-top: 1rem; padding-bottom: 1rem;">
         <div class="container" style="max-width: 700px;">
           <p>Because of the personal survey, there are cases where the information on this site is "different from the fact" due to business content change or misunderstanding etc.<br>Therefore, please do not use for investment judgment. Also, this site is not intended to solicit investment.</p>
@@ -998,14 +988,5 @@
     <script src="../../js/plugins.js"></script>
     <script src="../../js/main.js"></script>
     <script src="../js/responsive.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-    <script src="../js/chart.js"></script>
-    <script>
-      window.onload = function() {
-        var ctx = document.getElementById("raqualiaPerformanceChart").getContext('2d');
-        var chartDataEn = new chartData('Net Sales', 'Operating Profit', 'Ordinary Profit', 'Net Profit', 'forecast');
-        var chartObj = new Chart(ctx, chartDataEn.data);      
-      };
-    </script>
   </body>
 </html>
